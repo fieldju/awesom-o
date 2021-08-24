@@ -22,8 +22,8 @@ build-dirs:
 
 .PHONY: build
 build: build-dirs Makefile
-	@echo "Building ${DIST_DIR}/armory${CLI_EXT}..."
-	@go build -ldflags="-X 'github.com/fieldju/awesom-o/cmd/version.Version=${VERSION}'" -o ${DIST_DIR}/armory${CLI_EXT} main.go
+	@echo "Building ${DIST_DIR}/awesome-o${CLI_EXT}..."
+	@go build -ldflags="-X 'github.com/fieldju/awesom-o/cmd/version.Version=${VERSION}'" -o ${DIST_DIR}/awesome-o${CLI_EXT} main.go
 
 ############
 ## Testing
