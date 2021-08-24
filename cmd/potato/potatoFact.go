@@ -1,4 +1,4 @@
-package cmd
+package potato
 
 import (
 	"fmt"
@@ -7,11 +7,10 @@ import (
 	"time"
 )
 
-// potatoFactCmd represents the potatoFact command
-var potatoFactCmd = &cobra.Command{
+var PotatoFactCmd = &cobra.Command{
 	Use:   "potato-fact",
 	Short: "Get a random potato fact!",
-	Run: execute,
+	Run:   execute,
 }
 
 var facts = []string{
@@ -43,10 +42,6 @@ var facts = []string{
 	"The potato originated in the region of southern Peru where it was first domesticated between 8000 BC and 5000 BC.",
 	"The word potato comes from the Spanish word patata.",
 	"Potato plants are usually pollinated by insects such as bumblebees.",
-}
-
-func init() {
-	rootCmd.AddCommand(potatoFactCmd)
 }
 
 func execute(cmd *cobra.Command, args []string) {

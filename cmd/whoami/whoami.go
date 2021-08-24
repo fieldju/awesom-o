@@ -1,4 +1,4 @@
-package cmd
+package whoami
 
 import (
 	"encoding/json"
@@ -11,14 +11,10 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var whoamiCmd = &cobra.Command{
+var WhoamiCmd = &cobra.Command{
 	Use:   "whoami",
 	Short: "Fetches information about your current AWS Credentials",
-	Run: exec,
-}
-
-func init() {
-	rootCmd.AddCommand(whoamiCmd)
+	Run:   exec,
 }
 
 func exec(cmd *cobra.Command, args []string) {
